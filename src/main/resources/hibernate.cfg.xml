@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+  	<!-- We're using PostgreSQL database so the dialect needs to PostgreSQL as 
+			well -->
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<!-- Enable this to see the SQL statements in the logs -->
+		<property name="show_sql">true</property>
+
+		<property name="hibernate.connection.CharSet">UTF-8</property>
+		<property name="hibernate.connection.characterEncoding">UTF-8</property>
+		<property name="hibernate.connection.useUnicode">true</property>
+
+		<!-- Automatically validates or exports schema DDL to the database when 
+			the SessionFactory is created -->
+		<property name="hbm2ddl.auto">update</property>
+	</session-factory>
+</hibernate-configuration>
